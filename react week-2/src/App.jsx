@@ -10,6 +10,7 @@ function App() {
   return(
     <>
     <ProductList/>
+    <ProductList/>
    
     </>
   )
