@@ -4,13 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import ProductList from './components/ProductList';
+import FilteredProduct from './components/FilterableProduct';
 
 
 function App() {
   return(
     <>
     <ProductList/>
-    <ProductList/>
+   <FilteredProduct/> 
    
     </>
   )
