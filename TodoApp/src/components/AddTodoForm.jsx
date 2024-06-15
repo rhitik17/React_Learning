@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const AddTodoForm = ({ onAddTodo }) => {
 
     const [todo, setTodo] = useState(' ');
+
+    useEffect(()=>{
+        setTimeout(()=> console.log("hello"));
+    })
 
     const handleSubmit = (e) => {
         e.preventDefault();
