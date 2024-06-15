@@ -1,20 +1,19 @@
-import { useState, useEffect } from 'react';
-import TodoModel from '../models/TodoModel';
+import { useState, useEffect } from "react";
+import TodoModel from "../models/TodoModel";
 
 const useTodoViewModel = () => {
-    const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([]);
 
-    useEffect(() => {
-        setTodos(TodoModel.getTodos());
-    }, []);
+  useEffect(() => {
+    setTodos(TodoModel.getTodos());
+  }, []);
 
-    const addTodo = (todo) =>{
-        TodoModel.addTodo(todo);
-        setTodos([...TodoModel.getTodos()]);
-    };
+  const addTodo = (todo) => {
+    TodoModel.addTodo(todo);
+    setTodos([...TodoModel.getTodos()]);
+  };
 
-
-const removeTodo = (index) => {
+  const removeTodo = (index) => {
     TodoModel.removeTodo(index);
     setTodos([...TodoModel.getTodos()]);
   };
